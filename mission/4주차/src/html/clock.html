@@ -11,55 +11,52 @@
       <div class="page_container">
         <div class="header_container">
           <div class="header_clock_font">Clock</div>
-          <div class="battery_percent">100%</div>
+          <div class="battery_percent" id="battery_size">100</div><div class="percent">%</div>
         </div>
         <hr>
         <div class="main_container">
           <div class="now_time_container">
             <h1>현재 시각</h1>
-            <div class="now_time_border">2023-11-26 11:00:42</div>
+            <div class="now_time_border" id="now_time_id"></div>
           </div>
           <div class="clock_list_container">
             <h1>알람 현황</h1>
             <div class="clock_list_border">
               <div class="divided_clock">
-                <p class="night_and_day">오전</p>
-                <p class="selected_time">03:52:39</p>
-                <div class="delete_button">삭제</div>
+                <p class="night_and_day"></p>
+                <p class="selected_time"></p>
+                <button type="button" class="delete_button" onclick="delete_func(1)">삭제</button>
               </div>
               <hr>
               <div class="divided_clock">
-                <p class="night_and_day">오전</p>
-                <p class="selected_time">03:52:39</p>
-                <div class="delete_button">삭제</div>
+                <p class="night_and_day"></p>
+                <p class="selected_time"></p>
+                <button type="button" class="delete_button" onclick="delete_func(2)">삭제</button>
               </div>
               <hr>
               <div class="divided_clock">
-                <p class="night_and_day">오전</p>
-                <p class="selected_time">03:52:39</p>
-                <div class="delete_button">삭제</div>
+                <p class="night_and_day"></p>
+                <p class="selected_time"></p>
+                <button type="button" class="delete_button" onclick="delete_func(3)">삭제</button>
               </div>
             </div>
-            <div class="delete_all">
-              전체 삭제
-            </div>
-            <div class="turn_off">
-              전원 끄기
-            </div>
+            <button type="button" class="delete_all" onclick="delete_all_func()">전체 삭제</button>
+            <button type="button" class="turn_off" onclick="turn_off_func()">전원 끄기</button>
           </div>
           <div class="input_alarm_container">
             <h1>알람</h1>
             <div class="input_alarm_border">
-              <input type="text" placeholder="시 (Hour)"/>
+              <input type="text" placeholder="시 (Hour)" id="hours"/>
               <hr>
-              <input type="text" placeholder="분 (Minute)"/>
+              <input type="text" placeholder="분 (Minute)" id="minutes"/>
               <hr>
-              <input type="text" placeholder="초 (Second)"/>
+              <input type="text" placeholder="초 (Second)" id="seconds"/>
             </div>
-            <div class="submit_container">추가</div>
+            <button type="button" onclick="insert_clock();" class="submit_container">추가</button>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="../js/clock.js"></script>
 </html>
